@@ -6,7 +6,7 @@
 ## Editar para una configuración básica /etc/dhcp/dhcpd.conf
 ***Editamos la configuración de este archivo abriendolo con el editor de texto "nano" con el siguiente comando:***
     
-    sudo nano /etc/dhcp/dhcpd.conf
+     nano /etc/dhcp/dhcpd.conf
 ***Una vez dentro añadimos la siguiente configuración:***
 ![Configuración del archivo /etc/dhcp/dhcpd.conf](./img/ConfSubnet.png)
 
@@ -46,3 +46,11 @@
 ***Si todo ha salido correctamente el comando nos deberia dar el siguiente resultado***
 ![Comprobación de IP por MAC](./img/MACcomp.png)
 ***Aqui comparamos la configuración del servidor con el resultado del comando en el cliente***
+
+## Comprueba con el wireshark los mensajes del protocolo
+***Instalamos wireshark con el siguiente comando:***
+
+    sudo apt install wireshark
+
+***Una ves instalado realiazamos una captura. Desconectamos la interfaz de red y la reconectamos, a continuación detenemos la captura y filtramos por "dhcp" y obtenemos el siguiente resultado:***
+![Captura Wireshark](./img/wireshark.png) 
